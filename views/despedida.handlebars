@@ -1,0 +1,27 @@
+<h1>Página de Despedida</h1>
+<p>{{{message}}}</p>
+
+{{#if usuarios}}
+    <ul>
+        {{#usuarios}}
+            <li>{{ nombre }}</li>
+        {{/usuarios}}
+    </ul>
+{{else}}
+    No hay usuarios
+{{/if}}
+
+<hr />
+<br>
+Usando un custom helper,...
+
+{{#helperList usuarios}}
+    {{nombre}}{{apellido}}
+{{/helperList}}
+{{^usuarios}}
+    No hay usuarios
+{{/usuarios}}
+
+<hr />
+<br>
+{{otroParametro}}
